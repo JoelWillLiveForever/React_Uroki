@@ -19,6 +19,11 @@ class App extends React.Component {
 
     helpText = "Help text, Pidor!"
 
+    componentDidUpdate(prevProp) {
+        if (this.state.helpText !== "Help")
+            console.log("Dolbaeb!!!")
+    }
+
     render() {
         return (
             <div>
