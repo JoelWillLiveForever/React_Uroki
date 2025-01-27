@@ -1,34 +1,9 @@
 import React from "react"
 import * as ReactDOMClient from "react-dom/client"
 
-// ReactDOM.render(
-//     <div>
-//         <h1>Привет</h1>
-//         <h2>Пока</h2>
-//     </div>
-// , document.getElementById("app"));
+import App from './App'
 
-
-// ReactDOM.render(React.createElement('input', {
-//     type: 'text',
-//     placeholder: 'Введите текст',
-//     onClick: () => console.log('Нажатие!'),
-//     onMouseEnter: () => console.log('Mouse Over!'),
-// }), document.getElementById("app"));
-
-
-const inputClick = () => console.log("Clicked!")
-const mouseOver = () => console.log("Mouse Over!")
-
-const helpText = "Help text, Pidor!"
-
-const elements = (
-    <div>
-        <h1>{helpText}</h1>
-        <input placeholder={helpText} onClick={inputClick} onMouseEnter={mouseOver} />
-        <p>{helpText === "Help Text, Pidor!" ? "Yes" : "No"}</p>
-    </div>
-)
+import './css/main.css'
 
 const app = ReactDOMClient.createRoot(document.getElementById("app"))
-app.render(elements)
+app.render(<App />)
